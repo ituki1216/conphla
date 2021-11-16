@@ -19,7 +19,7 @@
         @csrf
 
         <div>
-            <label for="job">職業aa<span>必須aaaaaa</span></label>
+            <label for="job">職aa業aa<span>必須aaaaaa</span></label>
             <input type="text" name="job" value="{{ old('job')}}">
             @if($error->has('job'))
             <p>{{ $error->first('job') }}</p>
