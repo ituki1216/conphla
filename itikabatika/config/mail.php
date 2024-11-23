@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'default' => env('MAIL_MAILER', 'log'),
+    'default' => env('MAIL_MAILER', 'log'), //git commit -m "コメント" --date="Jul 7 23:59:59 2021 +0900"
 
     /*
     |--------------------------------------------------------------------------
