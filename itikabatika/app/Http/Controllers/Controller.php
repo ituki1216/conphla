@@ -1,8 +1,5 @@
 <?php
 
 namespace App\Http\Controllers;
+if
 
-abstract class Controller //s
-{
-    //
-}
