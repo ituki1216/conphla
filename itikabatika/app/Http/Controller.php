@@ -37,6 +37,9 @@ class FormController extends Controllers
         $submitBtnVal = $requets->input('submitBtnVal');
         switch ($submitBtnVal){
             case 'confirm':
+                //確認画面へ
+                return to_route('contact.confirm')->withInput();
+                break;
         }
     }
 }
