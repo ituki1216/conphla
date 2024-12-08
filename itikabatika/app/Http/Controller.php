@@ -31,15 +31,27 @@ class FormController extends Controllers
     //メール送信
     public function sendMail(ContactFormRequest $request) // もしsendMainlに関する申請がきたら
     {
-        $form_date = $request->validated();
+        $form_date = $request->validated(); //バリデーションされたformdataを返す
 
         //submitのbuttonの値により結果を分岐させる
-        $submitBtnVal = $requets->input('submitBtnVal');
+        $submitBtnVal = $request->input('submitBtnVal'); //これをもとにformの推移籍を決める
         switch ($submitBtnVal){
             case 'confirm':
                 //確認画面へ
                 return to_route('contact.confirm')->withInput();
                 break;
+            case 'back':
+                //入力画面へ戻る
+                return to_route('contact')->withInput();
+                break;
+            case 'complete':
+                //送信先メールアドレス
+                $email_admin=env('yamanakasan@icloud.com');
+                $email_user = $form_data('email')
+
+                return to_route('contact.complete');
+                break;
+            default:
         }
     }
 }
