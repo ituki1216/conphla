@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('layouts.default') <!--お問い合わせ画面作成 -->
 @section('title', 'お問い合わせ')
 
 @section('contact')
