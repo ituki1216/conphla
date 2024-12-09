@@ -1,5 +1,5 @@
-@extend('layouts.default')
-@session('title', 'Home')
+@extend('layouts.default') <!--ここはuserが最初に行きつく画面です-->
+@section('title', 'Home')
 
 <section>
 
@@ -8,5 +8,5 @@
     <div>
         <a href="/contact">お問い合わせ</a>
     </div>
-    
+
 </section>
