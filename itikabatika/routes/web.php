@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 
 //お問い合わせfoam
-Route::get('contact', [FormController::class, "index"])->name['contact'];
+Route::get('contact', [FormController::class, "index"])->name['contact']; //ユーザーが/contactにaccessしたときにFormControllerのindexメソッドを呼び出します indexは通常問い合わせfoamの初期画面を表示する
 Route::post('contact.confirm', [FormController::class, "sendMail"]);
 Route::get('/contact/confirm', [FormController::class, 'confirm'])->name('contact.confirm');
 Route::get('contact.complete', [FormController::class, "complete"])->name('contact.complete');
