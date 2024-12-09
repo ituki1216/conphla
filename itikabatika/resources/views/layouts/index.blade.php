@@ -1,4 +1,4 @@
-@extend('layouts.default') <!--ここはuserが最初に行きつく画面です-->
+@extend('layouts.default') <!--ここはuserが最初に行きつく画面です, extendは（）内を継承する？意味が分からんって-->
 @section('title', 'Home')
 
 <section>
