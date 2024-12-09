@@ -19,13 +19,13 @@
         @csrf
 
         <div>
-            <label for="job">職業<span>必須</span></label>
+            <label for="job">職業<span>必須aaaaaa</span></label>
             <input type="text" name="job" value="{{ old('job')}}">
             @if($error->has('job'))
             <p>{{ $error->first('job') }}</p>
             @endif
         </div>
 
-        
+
     </form>
 </section>
