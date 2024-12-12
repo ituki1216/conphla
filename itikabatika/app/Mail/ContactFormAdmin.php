@@ -10,7 +10,7 @@ use Illuminate\\Mail\\Mailables\\Envelope;
 use Illuminate\\Mail\\Mailables\\Address;
 use Illuminate\\Queue\\SerializesModels;
 
-class ContactFormAdminMail extends Mailable
+class ContactFormAdminMail extends Mailable //ContactFormAdminMailはMailableを継承しています
 {
     use Queueable, SerializesModels;
 
@@ -21,7 +21,7 @@ class ContactFormAdminMail extends Mailable
 
     public function envelope(): envelope
     {
-        $from = new Address($this->form['email'], $this->form_data['name']);
+        $from = new Address($this->form['email'], $this->form_data['name']); //$this->formの中からemailとnameを取得してaddressオブジェクトを作成します。これはメールの送信者情報です
         $subject = '[' . env('APP_NAME') . '] お問い合わせがありました';
 
         return new Envelope(
