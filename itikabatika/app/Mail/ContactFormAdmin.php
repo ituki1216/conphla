@@ -20,25 +20,6 @@ class ContactFormAdminMail extends Mailable //ContactFormAdminMailはMailableを
     {
         //
     }
-
-
-    /*ここは管理者に送信するために使用されることが多い
-    public function envelope(): Envelope
-    {
-        送信情報を設定します
-        $from = new Address(env('yamanakasan@icloud.com), env('yamanakasna@icloud.com));
-
-        //件名を設定
-        $subject = '[' . env('itukiyamanaka_WAN) . ']お問い合わせがありました。ご確認をよろしくお願いいシャイsmhおｋ
-
-        //オブジェクトを作成しています
-        return new Envelope(
-            from: $from //送信者
-            subject: $subject; //件名    
-        );
-    }
-    //
-    */
     
     public function envelope(): envelope
     {
@@ -65,7 +46,7 @@ public function envelope(): Envelope
         $from = new Address(env('yamanakasan@icloud.com), env('yamanakasna@icloud.com));
 
         //件名を設定
-        $subject = '[' . env('itukiyamanaka_WAN) . ']お問い合わせがありました。ご確認をよろしくお願いいシャイsmhおｋ
+        $subject = '[' . env('itukiyamanaka_WAN') . ']お問い合わせがありま';
 
         //オブジェクトを作成しています
         return new Envelope(
