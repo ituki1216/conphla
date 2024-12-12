@@ -14,11 +14,32 @@ class ContactFormAdminMail extends Mailable //ContactFormAdminMailはMailableを
 {
     use Queueable, SerializesModels;
 
+    //constructメソッドは、コンストラクタと呼ばれる特別なメソッドで、クラスが作成されと聞きに、自動的に呼び出されるメソッド
+
     public function __construct(public array $form_data) //constructはコンストラクタメソッドでクラスのインスタンスが作成されたときに自動的に呼び出されます、
     {
         //
     }
 
+
+    /*ここは管理者に送信するために使用されることが多い
+    public function envelope(): Envelope
+    {
+        送信情報を設定します
+        $from = new Address(env('yamanakasan@icloud.com), env('yamanakasna@icloud.com));
+
+        //件名を設定
+        $subject = '[' . env('itukiyamanaka_WAN) . ']お問い合わせがありました。ご確認をよろしくお願いいシャイsmhおｋ
+
+        //オブジェクトを作成しています
+        return new Envelope(
+            from: $from //送信者
+            subject: $subject; //件名    
+        );
+    }
+    //
+    */
+    
     public function envelope(): envelope
     {
         $from = new Address($this->form['email'], $this->form_data['name']); //$this->formの中からemailとnameを取得してaddressオブジェクトを作成します。これはメールの送信者情報です
@@ -36,3 +57,19 @@ class ContactFormAdminMail extends Mailable //ContactFormAdminMailはMailableを
 
     
 }
+
+
+public function envelope(): Envelope
+    {
+        送信情報を設定します
+        $from = new Address(env('yamanakasan@icloud.com), env('yamanakasna@icloud.com));
+
+        //件名を設定
+        $subject = '[' . env('itukiyamanaka_WAN) . ']お問い合わせがありました。ご確認をよろしくお願いいシャイsmhおｋ
+
+        //オブジェクトを作成しています
+        return new Envelope(
+            from: $from //送信者
+            subject: $subject; //件名    
+        );
+    }
