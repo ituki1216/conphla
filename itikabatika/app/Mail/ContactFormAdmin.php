@@ -33,4 +33,6 @@ class ContactFormAdminMail extends Mailable
     public function content(
         text: 'emails. contact.admin',
     );
+
+    
 }
