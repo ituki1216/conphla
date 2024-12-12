@@ -44,4 +44,13 @@ class ContactFormUserMail extends Mailable
             text: 'emails.comtact.user',  //プレーンテキストで送信
         );
     }
+
+    /*メッセージの添付ファイルを取得する操作を指定する
+    例えばメールの添付ファイルををプログラムで読み込んだり、保存したり、表示したりする処理
+    */
+
+    public function attachments(): array
+    {
+        return [];
+    }
 }
